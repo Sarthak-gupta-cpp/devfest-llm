@@ -42,7 +42,7 @@ The keywords must:
 - Favor roles, skills, domains, and organizations
 - Avoid generic words like "student", "member", "trainee", "learning"
 - Avoid full sentences or descriptions
-- Prefer concrete, searchable phrases (1–3 words)
+- Prefer concrete, searchable phrases (1-3 words)
 - Reflect the user's current interests and activities
 
 Profile data (context only, do not repeat):
@@ -50,7 +50,7 @@ Profile data (context only, do not repeat):
 {profile_text}
 >>>
 
-Return ONLY a JSON array of strings, like:
+Return ONLY a array of strings, like:
 ["machine learning", "web development", "javascript", "bits goa"]
 
 Do not include explanations, numbering, or extra text.
@@ -72,7 +72,7 @@ Do not include explanations, numbering, or extra text.
 
 if __name__ == "__main__":
     # Load JSON profiles
-    with open("user.json", "r", encoding="utf-8") as f:
+    with open("candidate.json", "r", encoding="utf-8") as f:
         user_profile = json.load(f)
 
     keywords = keywords_from_profile(user_profile)
